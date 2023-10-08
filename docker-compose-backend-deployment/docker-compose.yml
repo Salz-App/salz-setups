@@ -9,9 +9,7 @@ services:
       - "8080:8080"
     restart: always
     environment:
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
-      REDIS_PASS:
+      REDIS_URL: redis://redis:6379
       NODE_ENV: production
       PORT: 8080
     links:
