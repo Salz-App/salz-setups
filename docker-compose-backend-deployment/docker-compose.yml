@@ -3,6 +3,7 @@ version: '3.3'
 services:
   redis:
     image: redis:6.2-alpine
+    restart: always
   web:
     image: jlucasamorim/salz-staging:latest
     ports:
