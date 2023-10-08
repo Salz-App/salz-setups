@@ -4,7 +4,7 @@ services:
   redis:
     image: redis:6.2-alpine
   web:
-    image: jlucasamorim/salz-preview:latest
+    image: jlucasamorim/salz-staging:latest
     ports:
       - "8080:8080"
     restart: always
