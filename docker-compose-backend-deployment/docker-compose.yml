@@ -2,8 +2,12 @@ version: '3.3'
 
 services:
   redis:
-    image: redis:6.2-alpine
-    restart: always
+    image: redis:alpine
+    ports:
+      - 6379:6379
+    volumes:
+      - redis:/data
+    restart: unless-stopped
   web:
     image: jlucasamorim/salz-staging:latest
     ports:
@@ -15,3 +19,5 @@ services:
       PORT: 8080
     links:
       - redis
+volumes:
+  redis:
